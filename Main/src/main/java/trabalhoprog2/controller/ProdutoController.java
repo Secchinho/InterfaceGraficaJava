@@ -6,7 +6,7 @@ import java.util.List;
 import trabalhoprog2.model.Produto;
 
 public class ProdutoController {
-    private List<Produto> produtos = new ArrayList<>();
+    private final List<Produto> produtos = new ArrayList<>();
 
     public void adicionarProdutos(String nome, double preco, int qtd) 
     {
