@@ -1,0 +1,35 @@
+# Java compiled class files
+*.class
+
+# Logs
+*.log
+
+# NetBeans
+nbproject/
+build/
+dist/
+
+# VS Code settings
+.vscode/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle/
+build/
+
+# IntelliJ IDEA
+*.iml
+.idea/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
