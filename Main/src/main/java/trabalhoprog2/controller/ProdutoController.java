@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import trabalhoprog2.model.Produto;
 import trabalhoprog2.view.Tela;
 
@@ -31,7 +33,6 @@ public class ProdutoController {
         tela.getBotaoCadastrar().addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent evt){
-                tela.getAreaTextual().setText("");
                 String nome = tela.getTxtNome().getText();
                   
                 try
@@ -69,14 +70,12 @@ public class ProdutoController {
                 // Captura o erro caso tente inserir algo que não seja um número em Preço e Quantidade
                 catch(NumberFormatException e)
                 {
-                    tela.getAreaTextual().setText("");
-                    tela.getAreaTextual().setText("Erro: Preço e Quantidade devem ser valores numéricos!"); 
+                    JOptionPane.showMessageDialog(tela, "Preço e Quantidade devem ser valores numéricos!", "Erro", JOptionPane.ERROR_MESSAGE); 
                 }
                 // Captura outros erros de validação e exibe a mensagem correspondente
                 catch(IllegalArgumentException e)
                 {
-                    tela.getAreaTextual().setText("");
-                    tela.getAreaTextual().setText("Erro: " + e.getMessage());  
+                    JOptionPane.showMessageDialog(tela, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);  
                 }
             }
         });
